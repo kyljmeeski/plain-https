@@ -17,6 +17,17 @@ public class Headers {
         this.headers = headers;
     }
 
+    public void add(byte[] header) {
+        add(new String(header));
+    }
+
+    public void add(String header) {
+        String[] pair = header.split(": ", 2);
+        if (pair.length > 1) {
+            add(pair[0], pair[1]);
+        }
+    }
+
     public void add(String key, String value) {
         headers.put(key, value);
     }
