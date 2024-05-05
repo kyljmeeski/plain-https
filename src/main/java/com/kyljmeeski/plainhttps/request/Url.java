@@ -9,13 +9,25 @@ public class Url {
     }
 
     public String host() {
-//        todo: implement retrieving of host from url
-        return null;
+        if (url.startsWith("https://")) {
+            return url.substring(8).split("/", 2)[0];
+        } else if (url.startsWith("http://")) {
+            return url.substring(7).split("/", 2)[0];
+        }
+        return url.split("/", 2)[0];
     }
 
     public String uri() {
-//        todo: implement retrieving of uri from url
-        return null;
+        if (url.startsWith("https://")) {
+            return "/" + url.substring(8).split("/", 2)[1];
+        } else if (url.startsWith("http://")) {
+            return "/" + url.substring(7).split("/", 2)[1];
+        }
+        String[] parts = url.split("/", 2);
+        if (parts.length > 1) {
+            return "/" + url.split("/", 2)[1];
+        }
+        return "/";
     }
 
 }
