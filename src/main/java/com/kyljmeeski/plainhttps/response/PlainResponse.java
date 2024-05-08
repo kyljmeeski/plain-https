@@ -8,14 +8,27 @@ import com.kyljmeeski.plainhttps.body.PlainBody;
 
 import java.util.Arrays;
 
+/**
+ * Implementation of the {@link Response} interface for handling plain HTTP responses.
+ */
 public class PlainResponse implements Response {
 
     private final byte[] response;
 
+    /**
+     * Constructs a new PlainResponse object with the given byte array representation of the HTTP response.
+     *
+     * @param response the byte array representing the HTTP response
+     */
     public PlainResponse(byte[] response) {
         this.response = response;
     }
 
+    /**
+     * Retrieves the status of the HTTP response.
+     *
+     * @return the status of the response as a {@link Status} object
+     */
     @Override
     public Status status() {
         for (int i = 0; i < response.length - 1; i++) {
@@ -27,6 +40,11 @@ public class PlainResponse implements Response {
         return null;
     }
 
+    /**
+     * Retrieves the headers of the HTTP response.
+     *
+     * @return the headers of the response as a {@link Headers} object
+     */
     @Override
     public Headers headers() {
         Headers headers = new Headers();
@@ -48,6 +66,11 @@ public class PlainResponse implements Response {
         return headers;
     }
 
+    /**
+     * Retrieves the body of the HTTP response.
+     *
+     * @return the body of the response as an implementation of {@link Body}
+     */
     @Override
     public Body body() {
         String contentType = headers().get("Content-Type").orElse("text/plain");
