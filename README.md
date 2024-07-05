@@ -1,6 +1,6 @@
 [![Java](https://img.shields.io/badge/Java-8%2B-orange)](https://www.oracle.com/java/)
 ![Lines of Code](https://img.shields.io/badge/lines_of_code-1151-green)
-![GitHub](https://img.shields.io/github/license/kyljmeeski/plain-https)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 **Plain HTTPS** is a simple and lightweight library that provides efficient HTTPS client.
 
