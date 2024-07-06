@@ -27,9 +27,11 @@ import com.kyljmeeski.plainhttps.Body;
 import com.kyljmeeski.plainhttps.Headers;
 import com.kyljmeeski.plainhttps.Response;
 import com.kyljmeeski.plainhttps.Status;
+import com.kyljmeeski.plainhttps.body.DechunkedBody;
 import com.kyljmeeski.plainhttps.body.PlainBody;
 
 import java.util.Arrays;
+import java.util.Optional;
 
 /**
  * Implementation of the {@link Response} interface for handling plain HTTP responses.
@@ -96,11 +98,16 @@ public class PlainResponse implements Response {
      */
     @Override
     public Body body() {
+        Optional<String> encoding = headers().get("Transfer-Encoding");
         String contentType = headers().get("Content-Type").orElse("text/plain");
         for (int i = 0; i < response.length - 3; i++) {
             if (response[i] == 13 && response[i + 1] == 10 && response[i + 2] == 13 && response[i + 3] == 10) {
                 byte[] bytes = Arrays.copyOfRange(response, i + 4, response.length);
-                return new PlainBody(bytes, contentType);
+                Body body = new PlainBody(bytes, contentType);
+                if (encoding.isPresent() && encoding.get().equals("chunked")) {
+                    body = new DechunkedBody(body);
+                }
+                return body;
             }
         }
         return null;
