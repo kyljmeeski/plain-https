@@ -4,17 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="071639d1-a70e-466a-83a4-0e3d44a982ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="071639d1-a70e-466a-83a4-0e3d44a982ac" name="Changes" comment="feat: create DechunkedBody implementation of Body representing a dechunked version on HTTP response body">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kyljmeeski/plainhttps/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kyljmeeski/plainhttps/body/DechunkedBodyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyljmeeski/plainhttps/response/PlainResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kyljmeeski/plainhttps/response/PlainResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;studying-kyljmeeski&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:kyljmeeski/plain-https.git&quot;,
+    &quot;accountId&quot;: &quot;b8f4d3ef-a48f-4261-a233-aaa28f84f5c0&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2ipsp7zfJSgdKLsY3rBFnVfqXrc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -23,10 +50,66 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.DechunkedBodyTest.executor": "Run",
+    "Notification.DisplayName-DoNotAsk-Vcs Important Messages": "VCS important messages",
+    "Notification.DisplayName-DoNotAsk-Vcs Notifications": "VCS notifications",
+    "Notification.DoNotAsk-Vcs Important Messages": "true",
+    "Notification.DoNotAsk-Vcs Notifications": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.kyljmeeski.plainhttps.body" />
+      <recent name="com.kyljmeeski.plainhttps.request" />
+      <recent name="com.kyljmeeski.plainhttps.response" />
+      <recent name="com.kyljmeeski.plainhttps" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.DechunkedBodyTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kyljmeeski.plainhttps.Main" />
+      <module name="plain-https" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kyljmeeski.plainhttps.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DechunkedBodyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="plain-https" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kyljmeeski.plainhttps.body.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kyljmeeski.plainhttps.body" />
+      <option name="MAIN_CLASS_NAME" value="com.kyljmeeski.plainhttps.body.DechunkedBodyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DechunkedBodyTest" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,6 +119,318 @@
       <option name="presentableId" value="Default" />
       <updated>1720199033153</updated>
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1720199050688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199050688</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update pom">
+      <option name="closed" value="true" />
+      <created>1720199162967</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199162967</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: create base skeleton">
+      <option name="closed" value="true" />
+      <created>1720199258998</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199258998</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dep: add junit">
+      <option name="closed" value="true" />
+      <created>1720199295481</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199295481</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: implement code() and phrase() methods of Status class, that retrieves status code and status phrase">
+      <option name="closed" value="true" />
+      <created>1720199318774</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199318774</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test: create test that checks, if the retrieved status code and status phrase correct">
+      <option name="closed" value="true" />
+      <created>1720199347987</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199347987</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test: create test that checks, if the accessed and inserted headers are the same">
+      <option name="closed" value="true" />
+      <created>1720199378752</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199378752</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: implement Body in PlainBody class: represents generic content in Request or Response">
+      <option name="closed" value="true" />
+      <created>1720199411412</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199411412</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: implement Request in GetRequest: class to make GET requests; create interface RequestLine, that represents request line in an HTTP request; implement RequestLine in GetRequestLine: request line that is used to construct GET requests; create class Url, that represents url, and provides methods to extract host and uri parts">
+      <option name="closed" value="true" />
+      <created>1720199482204</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199482204</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: implement host() and uri() methods of Url">
+      <option name="closed" value="true" />
+      <created>1720199510849</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199510850</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test: test Url: cases are: when no path (root, &quot;/&quot;), with no scheme, with &quot;http&quot; scheme, with &quot;https&quot; scheme">
+      <option name="closed" value="true" />
+      <created>1720199528296</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199528296</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: implement execute() method of GetRequest; add bytes() method to Headers: so we can use them to construct GET request, override toString(); implement Response in PlainResponse: for handling plain (generic) HTTP response">
+      <option name="closed" value="true" />
+      <created>1720199569654</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199569654</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: implement status(), headers() and body() methods() of PlainResponse: they have to extract status, headers and body from response respectively; add add(String header) and add(byte[] header) methods to Headers, so we can add new header providing header as a string in the format: &quot;key: value&quot;, or by its byte array representation">
+      <option name="closed" value="true" />
+      <created>1720199599524</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199599524</updated>
+    </task>
+    <task id="LOCAL-00014" summary="test: test PlainResponse if its methods extract everything correctly">
+      <option name="closed" value="true" />
+      <created>1720199809766</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199809766</updated>
+    </task>
+    <task id="LOCAL-00015" summary="test: test GetRequest: check if &quot;Content-Length&quot; header and actual response body contents length is equal">
+      <option name="closed" value="true" />
+      <created>1720199831355</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199831355</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: create RequestWithBody interface that represents an HTTP request that can contain body; implement RequestWithBody (alongside with Request interface) in PostRequest">
+      <option name="closed" value="true" />
+      <created>1720199868128</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199868128</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: implement RequestLine in PostRequest to create request line to construct POST request; implement with() method of PostRequest">
+      <option name="closed" value="true" />
+      <created>1720199900666</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199900666</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: implement execute() and containing() methods">
+      <option name="closed" value="true" />
+      <created>1720199915571</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199915571</updated>
+    </task>
+    <task id="LOCAL-00019" summary="test: test by checking the &quot;Content-Length&quot; from headers and actual response body length from Body.content().length">
+      <option name="closed" value="true" />
+      <created>1720199934946</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199934946</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: implement Body in TextBody representing HTTP response with content type &quot;text/plain&quot;">
+      <option name="closed" value="true" />
+      <created>1720199957641</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199957641</updated>
+    </task>
+    <task id="LOCAL-00021" summary="test: test if the content type and body content are correct">
+      <option name="closed" value="true" />
+      <created>1720199977051</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1720199977051</updated>
+    </task>
+    <task id="LOCAL-00022" summary="dep: add gson">
+      <option name="closed" value="true" />
+      <created>1720200026660</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200026660</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat: implement Body in JsonBody representing body of content-type &quot;application/json&quot;">
+      <option name="closed" value="true" />
+      <created>1720200085100</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200085100</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: create MissingFieldException that is thrown when a required field is missing during deserialization; create BodyWrapper that is a class for handling HTTP response bodies">
+      <option name="closed" value="true" />
+      <created>1720200095403</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200095403</updated>
+    </task>
+    <task id="LOCAL-00025" summary="doc: add javadocs to Body and its implementations">
+      <option name="closed" value="true" />
+      <created>1720200136920</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200136920</updated>
+    </task>
+    <task id="LOCAL-00026" summary="doc: add javadocs to Url, RequestLine and its implementations">
+      <option name="closed" value="true" />
+      <created>1720200168523</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200168523</updated>
+    </task>
+    <task id="LOCAL-00027" summary="doc: add javadocs to Response and its implementation">
+      <option name="closed" value="true" />
+      <created>1720200202312</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200202312</updated>
+    </task>
+    <task id="LOCAL-00028" summary="doc: add javadocs to Request and its implementations">
+      <option name="closed" value="true" />
+      <created>1720200237580</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200237580</updated>
+    </task>
+    <task id="LOCAL-00029" summary="doc: add javadocs to MissingFieldException and BodyWrapper">
+      <option name="closed" value="true" />
+      <created>1720200258173</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200258173</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add license">
+      <option name="closed" value="true" />
+      <created>1720200371301</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200371301</updated>
+    </task>
+    <task id="LOCAL-00031" summary="update pom.xml; create README.md">
+      <option name="closed" value="true" />
+      <created>1720201450635</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1720201450635</updated>
+    </task>
+    <task id="LOCAL-00032" summary="create LICENSE">
+      <option name="closed" value="true" />
+      <created>1720201536667</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1720201536667</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update README: update license badge">
+      <option name="closed" value="true" />
+      <created>1720201924844</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1720201924844</updated>
+    </task>
+    <task id="LOCAL-00034" summary="feat: create DechunkedBody implementation of Body representing a dechunked version on HTTP response body">
+      <option name="closed" value="true" />
+      <created>1720289004196</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1720289004196</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: implement host() and uri() methods of Url" />
+    <MESSAGE value="test: test Url: cases are: when no path (root, &quot;/&quot;), with no scheme, with &quot;http&quot; scheme, with &quot;https&quot; scheme" />
+    <MESSAGE value="feat: implement execute() method of GetRequest; add bytes() method to Headers: so we can use them to construct GET request, override toString(); implement Response in PlainResponse: for handling plain (generic) HTTP response" />
+    <MESSAGE value="feat: implement status(), headers() and body() methods() of PlainResponse: they have to extract status, headers and body from response respectively; add add(String header) and add(byte[] header) methods to Headers, so we can add new header providing header as a string in the format: &quot;key: value&quot;, or by its byte array representation" />
+    <MESSAGE value="test: test PlainResponse if its methods extract everything correctly" />
+    <MESSAGE value="test: test GetRequest: check if &quot;Content-Length&quot; header and actual response body contents length is equal" />
+    <MESSAGE value="feat: create RequestWithBody interface that represents an HTTP request that can contain body; implement RequestWithBody (alongside with Request interface) in PostRequest" />
+    <MESSAGE value="feat: implement RequestLine in PostRequest to create request line to construct POST request; implement with() method of PostRequest" />
+    <MESSAGE value="feat: implement execute() and containing() methods" />
+    <MESSAGE value="test: test by checking the &quot;Content-Length&quot; from headers and actual response body length from Body.content().length" />
+    <MESSAGE value="feat: implement Body in TextBody representing HTTP response with content type &quot;text/plain&quot;" />
+    <MESSAGE value="test: test if the content type and body content are correct" />
+    <MESSAGE value="dep: add gson" />
+    <MESSAGE value="feat: implement Body in JsonBody representing body of content-type &quot;application/json&quot;" />
+    <MESSAGE value="feat: create MissingFieldException that is thrown when a required field is missing during deserialization; create BodyWrapper that is a class for handling HTTP response bodies" />
+    <MESSAGE value="doc: add javadocs to Body and its implementations" />
+    <MESSAGE value="doc: add javadocs to Url, RequestLine and its implementations" />
+    <MESSAGE value="doc: add javadocs to Response and its implementation" />
+    <MESSAGE value="doc: add javadocs to Request and its implementations" />
+    <MESSAGE value="doc: add javadocs to MissingFieldException and BodyWrapper" />
+    <MESSAGE value="add license" />
+    <MESSAGE value="update pom.xml; create README.md" />
+    <MESSAGE value="create LICENSE" />
+    <MESSAGE value="update README: update license badge" />
+    <MESSAGE value="feat: create DechunkedBody implementation of Body representing a dechunked version on HTTP response body" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: create DechunkedBody implementation of Body representing a dechunked version on HTTP response body" />
   </component>
 </project>
